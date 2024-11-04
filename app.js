@@ -29,7 +29,7 @@ app.get("/test", (req, res) => {
 });
 
 app.get("/signin", (req, res) => {
-    res.render("signin",context={
+    res.render("signin", context = {
         alert: ""
     });
 });
@@ -126,15 +126,15 @@ app.get("/user/Freelancer/Dashboard", isLoggedIn, (req, res) => {
     res.render("freelancer")
 })
 
-app.get("/users/Freelancer/jobs",isLoggedIn, (req, res) => {
+app.get("/users/Freelancer/jobs", isLoggedIn, (req, res) => {
     res.render("myjob");
 });
 
-app.get("/user/Freelancer/proposal",isLoggedIn, (req, res) => {
+app.get("/user/Freelancer/proposal", isLoggedIn, (req, res) => {
     res.render("proposal");
 });
 
-app.get("/user/profile",isLoggedIn, (req, res) => {
+app.get("/user/profile", isLoggedIn, (req, res) => {
     res.render("profile");
 });
 
