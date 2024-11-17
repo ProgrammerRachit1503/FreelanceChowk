@@ -1,0 +1,7 @@
+Buisness Created job:
+    Ecommerce
+    Skill Ecommerce,Python,HTML,CSS,3 rating
+
+indexes:
+    skills:
+    python,ecommerce,html,css

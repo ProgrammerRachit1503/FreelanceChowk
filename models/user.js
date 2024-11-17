@@ -8,15 +8,10 @@ const userSchema = mongoose.Schema({
     username : String,
     email : String,
     password : String,
+    userType : String,
     isFreelancer : Boolean,
-    FL_details : {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: "freelancer"
-    },
-    C_details : {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: "client"
-    }
+    FL_details : dict,
+    C_details : {dict},
 })
 
 module.exports = mongoose.model('user', userSchema);
