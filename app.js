@@ -21,7 +21,26 @@ app.use(express.static(path.join(__dirname, "public")));
 app.use("/auth", authRouter);
 
 app.get("/", (req, res) => {
-    res.render("index");
+    let jobs = [
+        {
+            title: "Job 1",
+            description: "This is job 1",
+            budget: 100,
+            skills: ["skill1", "skill2"],
+            postedBy: "User1",
+        },
+        {
+            title: "Job 2",
+            description: "This is job 2",
+            budget: 200,
+            skills: ["skill3", "skill4"],
+            postedBy: "User2",
+        }
+    ]
+    res.render("index",context={
+        jobs
+    }
+    );
 });
 
 app.get("/test", (req, res) => {
